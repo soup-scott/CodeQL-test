@@ -33,7 +33,7 @@ jobs:
 
       - name: Build code
         run: |
-          gcc -m32 -z execstack -fno-stack-protector -vuln-buf-over.c -o vuln
+          gcc -m32 -z execstack -fno-stack-protector vuln-buf-over.c -o vuln
           ./vuln
 
       - name: Perform CodeQL Analysis
