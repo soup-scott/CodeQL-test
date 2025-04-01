@@ -1,0 +1,13 @@
+[2025-03-31 23:35:44] This is codeql database analyze /opt/results/db codeql/python-queries --format=csv --output=/opt/results/results.csv
+[2025-03-31 23:35:44] Log file was started late.
+[2025-03-31 23:35:44] [PROGRESS] database analyze> Running queries.
+[2025-03-31 23:35:44] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --warnings=show --qlconfig-file=/qlconfig.yml --no-rerun --interpret-passthrough=null,--format=csv,-o=/opt/results/results.csv,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--qlconfig-file=/qlconfig.yml,--,/opt/results/db,codeql/python-queries -- /opt/results/db codeql/python-queries
+[2025-03-31 23:35:44] Calling plumbing command: codeql resolve ram --format=json
+[2025-03-31 23:35:44] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx1880M",
+                        "--off-heap-ram=2050"
+                      ]
+[2025-03-31 23:35:44] Chaining via /tmp/codeql.zQcaRDXy to plumbing: execute queries -J-Xmx1880M --off-heap-ram=2050 --verbosity=progress --logdir=/opt/results/db/log --evaluator-log-level=5 --warnings=show --qlconfig-file=/qlconfig.yml --no-rerun --interpret-passthrough=null,--format=csv,-o=/opt/results/results.csv,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--qlconfig-file=/qlconfig.yml,--,/opt/results/db,codeql/python-queries --output=/opt/results/db/results -- /opt/results/db/db-python codeql/python-queries
+[2025-03-31 23:35:44] Plumbing command codeql database run-queries completed with status 70.
+[2025-03-31 23:35:44] Exiting with code 70
