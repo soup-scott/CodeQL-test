@@ -31,9 +31,6 @@ jobs:
         with:
           languages: ${{ matrix.language }}
 
-      - name: Build code
-        run: |
-          python3 sql-inj-vuln.py
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
