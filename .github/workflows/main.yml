@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'c' ]  # Change this to match your codebase (e.g., 'cpp', 'java', etc.)
+        language: [ 'python' ]  # Change this to match your codebase (e.g., 'cpp', 'java', etc.)
 
     steps:
       - name: Checkout repository
@@ -33,8 +33,7 @@ jobs:
 
       - name: Build code
         run: |
-          gcc -m32 -z execstack -fno-stack-protector vuln-buf-over.c -o vuln
-          ./vuln
+          python3 sql-inj-vuln.py
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
